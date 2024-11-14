@@ -1,0 +1,116 @@
+.my-account-container {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 80px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-account-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.my-account-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #012441;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.my-account-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.account-section {
+    margin-bottom: 20px;
+    animation: slideUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.account-section:nth-child(odd) {
+    animation-delay: 0.2s;
+}
+
+.account-section:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.account-section label {
+    font-weight: 500;
+    color: #012441;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.account-section p, 
+.account-section input {
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.account-section input {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #555;
+}
+
+.account-section input:focus {
+    border-color: #012441;
+    background-color: #eef6ff;
+    outline: none;
+}
+
+.my-account-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.edit-button, .save-button {
+    padding: 1px 20px;  /* Reduced padding */
+    font-size: 14px;    /* Slightly smaller font size */
+    background-color: #012441;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button:hover, .save-button:hover {
+    background-color: #012441;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.edit-button:active, .save-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
